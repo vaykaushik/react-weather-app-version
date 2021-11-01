@@ -55,7 +55,7 @@ const Weather = () => {
             <div className="weather__card">
 
                 <div className="weather__card__search">
-                    <input type="text" value={input} onChange={onChangeHandler} placeholder="Please enter location i.e. 'London'"/>
+                    <input type="text" value={input} onChange={onChangeHandler} placeholder="Search location i.e. 'London'"/>
                     <button type="submit" onClick={submitHandler}><AiOutlineSearch/></button>
                 </div>
 
