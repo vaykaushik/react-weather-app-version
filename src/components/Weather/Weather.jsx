@@ -33,7 +33,7 @@ const Weather = () => {
     const submitHandler = async e => {
         e.preventDefault();
 
-        const result = await axios(`http://api.openweathermap.org/data/2.5/weather?q=${input}&units=metric&appid=${API_KEY}`);
+        const result = await axios(`https://api.openweathermap.org/data/2.5/weather?q=${input}&units=metric&appid=${API_KEY}`);
 
         // Data to be retrieved and updated via state shown below
 
