@@ -1,0 +1,174 @@
+@use '../../sass/variables';
+@use '../../sass/typography';
+
+.weather {
+
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    justify-content: center;
+    align-items: center;
+    background-image: url('https://unsplash.it/3840/2160');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: bottom center;
+    background-color: rgba(0, 0, 0, 0.5);
+    background-blend-mode: multiply;
+
+    .weather__title {
+        font-size: 1.65rem;
+        margin-bottom: 1.5rem;
+        font-weight: 500;
+        color: #fafafa;
+
+        span {
+            color: rgba(224, 207, 160, 1);
+            font-size: inherit;
+            font-weight: 300;
+            font-style: italic;
+            font-size: 1.7rem;
+        }
+    }
+    
+    h1 {
+        font-family: typography.$serif;
+        font-size: 1rem;
+        font-weight: 100;
+    }
+
+    span {
+        font-family: typography.$sans-serif;
+        font-size: 1rem;
+        font-weight: 500;
+    }
+
+    .symbol {
+        font-size: 0.9rem;
+        font-weight: 100;
+        font-style: italic;
+        padding-left: 0.2rem;
+    }
+
+    .weather__card {
+        position: relative;
+        background: rgba(0, 0, 0, 0.25);
+        color: #fafafa;
+        padding: 2rem;
+        width: 300px;
+        height: 300px;
+        border-radius: 5px;
+        box-shadow: 2px 5px 10px rgba(0, 0, 0, 0.2);
+
+        @media screen and (max-width: 400px) {
+            width: 275px;
+            height: 300px;
+        }
+
+        .weather__card__search {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+
+            input {
+                font-family: typography.$sans-serif;
+                font-size: 0.9rem;
+                font-weight: 400;
+                padding: 0.4rem 1rem;
+                width: 100%;
+                background: transparent;
+                border: 1.5px solid rgba(255, 255, 255, 0.25);
+                border-radius: 5px;
+                color: #fff;
+
+                &:focus {
+                    outline: 0;
+                    border: 1.5px solid rgba(224, 207, 160, 0.5);
+                }
+
+                &::placeholder {
+                    margin-left: 1rem;
+                    color: #fff;
+                    font-style: italic;
+                    font-weight: 100;
+                    font-size: 0.9rem;
+                }
+            }
+
+            button {
+                cursor: pointer;
+                position: absolute;
+                top: 0.25rem;
+                right: 0.25rem;
+                bottom: 0;
+                border: none;
+                outline: none;
+                background: transparent;
+                color: rgba(255, 255, 255, 0.5);
+                transition: 0.2s ease-in-out;
+                font-size: 1.1rem;
+
+                &:hover {
+                    color: rgba(224, 207, 160, 1);
+                }
+            }
+        }
+
+        .weather__card__data {
+            margin-top: 1.75rem;
+
+            .location {
+                margin-bottom: 0.75rem;
+                position: relative;
+
+                span {
+                    position: relative;
+                    color: rgba(224, 207, 160, 1);
+                    padding: 0 1rem;
+                    font-weight: 400;
+                    font-size: 1.7rem;
+                    padding: 0 1rem;
+
+                    &:after {
+                        position: absolute;
+                        content: '';
+                        display: block;
+                        width: 100%;
+                        height: 25%;
+                        background: rgba(224, 175, 160, 0.2);
+                        transform: skewX(-12deg);
+                        top: 1.3rem;
+                        right: 0;
+                        bottom: 0;
+                    }
+                }
+            }
+
+            .weather__card__title {
+                font-size: 0.9rem;
+                font-family: typography.$sans-serif;
+                font-weight: 300;
+                padding: 0.33rem 0;
+                margin-left: 1rem;
+
+                span {
+                    font-size: 0.9rem;
+                    padding-left: 0.25rem;
+                }
+
+                .symbol {
+                    font-size: 0.9rem;
+                    font-weight: 500;
+                    color: rgba(224, 207, 160, 1);
+                    padding-left: 0.25rem;
+                }
+            }
+
+            img {
+                margin-left: 0.5rem;
+                padding: 0;
+            }
+        }
+    }
+
+}
