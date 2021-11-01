@@ -1,3 +1,5 @@
+A live link can be found here: https://react-weather-app-version.netlify.app/
+
 **What was the goal of this project?**
 
 1 - To understand how to target the user input using synthetic events to retrieve specific information from an API and display accordingly.
